@@ -9,8 +9,11 @@ import { ThemeProvider } from '@emotion/react'
 function App() {
   return (
       <div className="App">
-        <Navbar></Navbar>
+      <Navbar></Navbar>
+      <div id="header">
         <HeaderComponent />
+
+        </div>
         {data.map((d, index) => (
           <div id="projects" style={style}>
             <Project props={d} i={index} key={index}></Project>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid, Card, CardContent, Button } from "@mui/material";
-import SendIcon from '@mui/icons-material/Send';
-
+import { Link } from 'react-scroll'
 import {
     FontAwesomeIcon
 } from "@fortawesome/react-fontawesome";
@@ -33,7 +32,8 @@ export default function Contact() {
                     </Grid>
                 </Grid>
                 <Button variant="contained" >
-                    Send
+                    <Link to="header" spy={true} smooth={true}><p>Return</p></Link>
+
                 </Button>
             </div>
             
