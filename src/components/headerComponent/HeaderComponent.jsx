@@ -49,12 +49,12 @@ const contactButton = {
     position: 'absolute',
     top: '25%',
     left: '10%',
-    color: '#EDB91E',
+    color: '#FFFFFF',
     border: '2px solid'
 }
 
 const contactButtonText = {
-        color: '#EDB91E',
+    color: '#FFFFFF',
         fontWeight: '16px',
         fontSize: '18px'
 }
@@ -66,7 +66,7 @@ const projectButton = {
 }
 
 const projectButtonText = {
-    color: '#EDB91E',
+    color: '#FFFFFF',
     fontWeight: '32px',
     fontSize: '36px'
 }
@@ -77,7 +77,7 @@ const name = {
     position: 'absolute',
     top: '15%',
     left: '10%',
-    color: '#222222'
+    color: '#FFFFFF'
 }
 
 const introduction = {
@@ -86,7 +86,7 @@ const introduction = {
     position: 'absolute',
     top: '15%',
     left: '60%',
-    color: '#222222'
+    color: '#FFFFFF'
 }
 
 const introductionText = {
@@ -95,5 +95,5 @@ const introductionText = {
     position: 'absolute',
     top: '20%',
     left: '60%',
-    color: '#222222'
+    color: '#FFFFFF'
 }
