@@ -7,64 +7,141 @@ import {
 
 export default function Contact() {
     return (
-        <div>
-            <div style={contact}>
-                <h3>Contact Me</h3>
-            </div>
-            
-            <div style={contact}>
-
-                <Grid container spacing={2}>
-                    <Grid item xs={6} md={6} style={rightCard}>
-                        <Card style={card} sx={{ minWidth: 250 }}>
-                            <CardContent>
-                                <p style={text}>joeyrichardson96@gmail.com</p>
-                            </CardContent>
-
-                        </Card>
-                    </Grid>
-                    <Grid item xs={6} md={6} style={leftCard}>
-                        <Card style={card} sx={{ minWidth: 250 }}>
-                            <CardContent>
-                                <p style={text}>07557987521</p>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                </Grid>
+        <div style={contacts}>
+            <div>  
+                <h1 style={h1Style}>Contacts</h1>
+                <div style={contactsBody}>
+                    <div style={contactsForm}>
+                        <form>
+                            <div style={inputContainer}>
+                                <label
+                                    style={labelText}
+                                    name="name">
+                                    Name
+                                </label>
+                                <input name="name"
+                                    style={input}
+                                ></input>
+                            </div>
+                            <div style={inputContainer}>
+                                <label
+                                    style={labelText}
+                                    name="name">
+                                    Email
+                                </label>
+                                <input name="name"
+                                    style={input}
+                                ></input>
+                            </div>
+                            <div style={inputContainer}>
+                                <label
+                                    style={labelText}
+                                    name="name">
+                                    Message
+                                </label>
+                                <input name="name"
+                                    style={{...input,...formMessage}}
+                                ></input>
+                            </div>
+                        </form>
+                    </div>
+                    <div style={contactDetails}>
+                        <p style={contactText}>
+                            07557987521
+                        </p>
+                        <p style={contactText}>
+                            joeyrichardson96@gmail.com
+                        </p>
+                    </div>
+                </div>
                 <Button variant="contained" >
                     <Link to="header" spy={true} smooth={true}><p>Return</p></Link>
-
                 </Button>
             </div>
             
        </div>
     );
 }
-const hr = {
-    margin: '32'
-}
-
-const contact = {
+const contacts = {
+    minHeight: '100vh',
     display: 'flex',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    position: 'relative'
 }
 
-const leftCard = {
+const contactsContainer = {
     display: 'flex',
-    justifyContent: 'left',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    width: '80%',
+    height: '100%',
+    marginTop: '2rem'
 }
 
-const rightCard = {
+const h1Style = {
+    fontSize: '3.5rem',
+    marginBottom: '2.5rem',
+    color: '#F56539'
+}
+
+const contactsBody = {
     display: 'flex',
-    justifyContent: 'right',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    width: '100%'
 }
 
-const card = {
-    padding: '16',
-    backgroundColor: '#5C5B58'
+const contactsForm = {
+    display: 'flex',
+    width: '100%'
 }
 
-const text = {
-    textAlign: "center",
-    color: "#EDB91E"
+const inputContainer = {
+    width: '100%'
+}
+
+const labelText = {
+    color: '#f56539',
+    display: 'inline-flex',
+    padding: '0.5px',
+    fontSize: '0.9rem',
+    fontWeight: '600'
+}
+
+const input = {
+    boxSizing: 'border-box',
+    borderRadius: '50px',
+    outline: 'none',
+    marginBottom: '2rem',
+    padding: '0.7rem',
+    width: '100%',
+    backgroundColor: '#212121',
+    borderColor: '#F56539',
+    border: '4px solid'
+
+}
+
+const formMessage = { height: '150px' }
+const contactText = {
+    color: '#EAEAEA',
+    width: '45%',
+    marginLeft: '1.5rem',
+    fontSize: '24px',
+    lineHeight: '110%',
+    wordBreak: 'word-break',
+    fontWeight: '600'
+}
+
+const contactDetails = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'spaceEvenly',
+    flex: '0.6 1',
+    boxSizing: 'border-box',
+    paddingLeft: '7rem',
+    marginTop: '1.2rem'
 }

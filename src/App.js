@@ -5,15 +5,14 @@ import headshot from './components/headerComponent/headerImage.jpg'
 import Contact from './components/contact/Contact'
 import '@fontsource/roboto/400.css';
 import { ThemeProvider } from '@emotion/react'
+import About from './components/about/About'
 
 function App() {
   return (
       <div className="App">
-      <Navbar></Navbar>
-      <div id="header">
-        <HeaderComponent />
-
-        </div>
+      {/* <Navbar></Navbar> */}
+      <HeaderComponent />
+      <About/>
         {data.map((d, index) => (
           <div id="projects" style={style}>
             <Project props={d} i={index} key={index}></Project>
@@ -53,11 +52,11 @@ const data = [
 
 const style = {
   padding: '32px',
-  backgroundColor: "#495057"
+  backgroundColor: "#212121"
 }
 
 const contactStyle = {
   padding: '64px',
-  backgroundColor: '#343a40'
+  backgroundColor: '#212121'
 }
 
