@@ -54,6 +54,9 @@ export default function Contact() {
                         </p>
                     </div>
                 </div>
+                <Button style={sendButton} variant="contained" >
+                    <Link to="header" spy={true} smooth={true}><p style={sendText}>Send</p></Link>
+                </Button>
                 <Button variant="contained" >
                     <Link to="header" spy={true} smooth={true}><p>Return</p></Link>
                 </Button>
@@ -106,9 +109,11 @@ const inputContainer = {
 const labelText = {
     color: '#f56539',
     display: 'inline-flex',
-    padding: '0.5px',
-    fontSize: '0.9rem',
-    fontWeight: '600'
+    padding: '6px',
+    fontSize: '1rem',
+    fontWeight: '700',
+    transform: 'translate(50px,50%)',
+    backgroundColor: '#212121'
 }
 
 const input = {
@@ -118,8 +123,8 @@ const input = {
     marginBottom: '2rem',
     padding: '0.7rem',
     width: '100%',
-    backgroundColor: '#212121',
     borderColor: '#F56539',
+    backgroundColor: '#212121',
     border: '4px solid'
 
 }
@@ -144,4 +149,16 @@ const contactDetails = {
     boxSizing: 'border-box',
     paddingLeft: '7rem',
     marginTop: '1.2rem'
+}
+
+const sendButton = {
+    backgroundColor: '#f56539',
+    width: '150px',
+    borderRadius: 28
+}
+
+const sendText = {
+    color: '#212121',
+    fontSize: '16px',
+    fontWeight: '600'
 }

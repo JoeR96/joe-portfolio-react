@@ -1,72 +1,50 @@
 import React from 'react'
 import { Grid } from '@mui/material'
-import { Card,CardContent } from '@mui/material'
-const isEven = (d) => {
-    console.log(d)
-    if (d % 2 == 0) {
-        return true
-    }
+import { Button } from '@mui/material'
+import ReactIcon from './projectImages/reactImage.jpg'
+import Fade from 'react-reveal'
+export default () => {
+    return (
+        <div style={projectContainer}>
+            <div style={projectHeader}>
+            </div>
+            <div style={projectBody}>
+                <div style={project}>
+                    <div style={projectContent}>
+                        <div style={projectDescription}>
 
-    return false
+                        </div>
+                        <h2 style={projectHeaderText}>Project Power</h2>
+                        <div style={projectButtons}>
+                            <a href="bbc.co.uk">A</a>
+                            <a href="bbc.co.uk">Y</a>
+                        </div>
+                    </div>
+                </div>
+                <div style={project}>
+                    <div style={projectContent}>
+                        <h2 style={projectHeaderText}>Project Power</h2>
+                        <div style={projectButtons}>
+                            <a href="bbc.co.uk">A</a>
+                            <a href="bbc.co.uk">Y</a>
 
-}
+                        </div>
+                    </div>
+                </div>
+                <div style={project}>
+                    <div style={projectContent}>
+                        <h2 style={projectHeaderText}>Project Power</h2>
+                        <div style={projectButtons}>
+                            <a href="bbc.co.uk">A</a>
+                            <a href="bbc.co.uk">Y</a>
 
-export default (props, index) => {
-
-    if (isEven(props.i))
-    {
-        return (
-            <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
-                    <Card style={ styleTwo }sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <h2 style={text}>{props.props.title}</h2>
-                            <p style={text}>{props.props.description}</p>
-                        </CardContent>
-
-                    </Card>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                    <Card style={styleOne} sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            < div style={imageContainer} >
-                                <img style={image} src={props.props.image}></img>
-                            </div >
-
-                        </CardContent>
-
-                    </Card>
-                </Grid>
-            </Grid>
-        )
-    }
-    else
-    {
-        return (
-            <Grid  container spacing={2}>
-                <Grid item xs={12} md = {6}>
-                    <Card style={styleOne} sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            < div style={imageContainer} >
-                                <img style={image} src={props.props.image}></img>
-                            </div >
-                        </CardContent>
-
-                    </Card>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                    <Card style={styleTwo} sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <h2 style={text}>{props.props.title}</h2>
-                            <p style={text}>{props.props.description}</p>
-                        </CardContent>
-
-                    </Card>
-                </Grid>
-            </Grid>
-        )
-        }
-    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    )
 }
 
 const text = {
@@ -76,7 +54,7 @@ const text = {
 
 const image = {
     width: '100%',
-    height: '75%'
+    height: '60%',
 }
     
 const imageContainer = {
@@ -84,12 +62,81 @@ const imageContainer = {
     justifyContent: 'center',
 }
 
-const styleOne = {
-    backgroundColor: "#212529"
+const projectContainer = {
+    backgroundColor: "#212121",
+
 }
 
-const styleTwo = {
-    backgroundColor: "#212529",
-    height: '32.5vw'
+const project = {
+    width: '304px',
+    height: '360px',
+    borderRadius: '10px',
+    justifyContent: 'center',
+    padding: '1.4rem 2rem ',
+    position: 'relative',
+    cursor: 'pointer',
+    overflow: 'hidden',
+    backgroundColor: '#F56539'
+}
+
+const projectContent = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '100%',
+    height: '100%',
+    flexDirection: 'column',
+    alignItems:'center'
+}
+
+const projectHeader = {
+
+}
+
+const projectBody = {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    gridGap: '4.5rem',
+    paddingBottom: '12.5rem'
+}
+
+const projectHeaderText = {
+    fontWeight: '600',
+    fontSize: '1.525rem',
+    lineHeight: '110%',
+    textAlign: 'center',
+    color: '#EAEAEA'
+}
+
+const projectButtons = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%'
+}
+
+const button = {
+    backgroundColor: '#f56539',
+    width: '150px',
+    borderRadius: 28,
+    color: '#EAEAEA'
+}
+
+const projectDescription = {
+    position: 'absolute',
+    width: '95%',
+    height: '160px',
+    left: '0',
+    top: '0',
+    transform: 'translate(-110,40%)',
+    padding: '15px',
+    borderRadius: '0 20px 20px 0',
+    transition: 'transform .9s,- webkit - transform .9s',
+    lineHeight: '110%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
 
 }

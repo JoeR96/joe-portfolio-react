@@ -6,6 +6,7 @@ import Contact from './components/contact/Contact'
 import '@fontsource/roboto/400.css';
 import { ThemeProvider } from '@emotion/react'
 import About from './components/about/About'
+import UniversityContainer from './components/uniProjects/UniversityContainer'
 
 function App() {
   return (
@@ -13,11 +14,8 @@ function App() {
       {/* <Navbar></Navbar> */}
       <HeaderComponent />
       <About/>
-        {data.map((d, index) => (
-          <div id="projects" style={style}>
-            <Project props={d} i={index} key={index}></Project>
-          </div>
-        ))}
+      <Project></Project>
+      <UniversityContainer></UniversityContainer>
         <div id="contact" style={contactStyle}>
           <Contact></Contact>
         </div>
