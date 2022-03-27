@@ -1,4 +1,4 @@
-import Carousel from 'react-material-ui-carousel'
+import Carousel from './Carousel'
 import Image from '../project/projectImages/reactImage.jpg'
 import Image2 from '../project/projectImages/reactNativeImage.png'
 import { Paper, Button } from '@mui/material'
@@ -13,12 +13,8 @@ export default () => {
             <div style={header}>
                 <h1 style={headerText}>University Projects</h1>
             </div>
-            <div style={body}>
-                    <Carousel>
-                        {
-                            items.map((item, i) => <Item key={i} item={item} />)
-                        }
-                    </Carousel>
+            <div style={carouselContainer}>
+                    <Carousel/>
             </div>
         </div>
     )
@@ -64,5 +60,9 @@ const body = {
 }
 
 const slider = {
-
+    
+}
+const carouselContainer = {
+    height: '50%',
+    paddingBottom: '3.5rem'
 }
