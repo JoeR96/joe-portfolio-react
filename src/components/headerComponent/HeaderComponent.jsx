@@ -26,7 +26,6 @@ export default () => {
                     <img src={headshot} style={portraitImage} alt="" />
                
                 <div style={landingContainerRight}>
-                    <FadeIn  >
                         <div style={{...lcrContent,...landingContainerRight}}>
                             <h6 style={lcrh6}>Junior Full Stack Developer</h6>
                             <h1 style={lcrh1}>Joe Richardson</h1>
@@ -46,7 +45,6 @@ export default () => {
                                 </Button>
                             </div>          
                         </div>         
-                    </FadeIn> 
                     </div>
                 
                 </div>
@@ -97,8 +95,7 @@ const portraitImage = {
 const lcrContent = {
     color: 'white',
     width: '45%',
-    marginLeft: '25rem',
-    marginRight: '25rem'
+    marginRight: '15rem'
 }
 
 const lclContent = {
