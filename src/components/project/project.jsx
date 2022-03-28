@@ -13,7 +13,7 @@ export default () => {
             <div style={projectBody} >
                 <div style={project}>
                     <div style={projectContent}>
-                        <FadeIn delay={180} style={projectSkills}>
+                        <FadeIn delay={180} visible={true} style={projectSkills}>
                         <div style={projectDescription}>
                          
                         </div>
@@ -38,7 +38,7 @@ export default () => {
                 </div>
                 <div style={project}>
                     <div style={projectContent}>
-                        <FadeIn delay={180} style={projectSkills}>
+                        <FadeIn delay={180} visible={true} style={projectSkills}>
 
                         <div style={projectDescription}>
 
@@ -61,7 +61,7 @@ export default () => {
                 </div>
                 <div style={project}>
                     <div style={projectContent}>
-                        <FadeIn delay={180} style={projectSkills}>
+                        <FadeIn delay={180} visible={true} style={projectSkills}>
                         <div style={projectDescription}>
 
                         </div>
@@ -196,3 +196,4 @@ const detailsIcon = {
         backgroundColor: '#EFEFEF',
     }
 }
+

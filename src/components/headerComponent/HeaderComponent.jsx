@@ -14,7 +14,7 @@ export default () => {
             <div id="header" style={landing}>
                 <div style={landingContainer}>
                 <div style={landingContainerLeft}>
-                    <FadeIn >
+                    <FadeIn visible={true} >
 
                         <div style={lclContent}>
                             <a href="https://github.com/JoeR96"><FaGithub style={detailsIcon} /></a>

@@ -5,7 +5,7 @@ import FadeIn from 'react-fade-in';
 export default () => {
     return (
         <div style={about} id="about">
-            <FadeIn delay={360}>
+            <FadeIn delay={360} visible={true}>
                 <div style={lineStyling}>
                     <div style={circle}></div>
                     <div style={circle}></div>

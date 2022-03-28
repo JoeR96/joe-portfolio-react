@@ -1,8 +1,8 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { Grid, Card, CardContent, Button } from "@mui/material";
 import { Link } from 'react-scroll'
 import { FiPhone, FiAtSign } from 'react-icons/fi';
-
+import { HiOutlineLocationMarker } from 'react-icons/hi';
 
 export default function Contact() {
     return (
@@ -20,12 +20,16 @@ export default function Contact() {
                                 </label>
                                 <input name="name"
                                     style={input}
+                                    variant='outlined'
                                 ></input>
                             </div>
                             <div style={inputContainer}>
                                 <label
                                     style={labelText}
-                                    name="name">
+                                    name="name"
+                                    variant='outlined'
+                                    >
+                                        
                                     Email
                                 </label>
                                 <input name="name"
@@ -44,19 +48,25 @@ export default function Contact() {
                             </div>
                         </form>
                     </div>
-                    <div style={contactDetails}>
-                        <div style={detailsIcon}>
-                            <FiPhone />
-                        </div>
-                        <p style={contactText}>
-                            07557987521
-                        </p>
-                        <div style={detailsIcon}>
-                            <FiAtSign />
-                        </div>
-                        <p style={contactText}>
-                            joeyrichardson96@gmail.com
-                        </p>
+                    <div style={detailGroup}>
+                        <a style={personalDetails}>
+                            <FiPhone style={detailsIcon} />
+                            <p style={contactText}>
+                                joeyrichardson96@gmail.com
+                            </p>
+                        </a>
+                        <a style={personalDetails}>
+                            <FiAtSign style={detailsIcon} />
+                            <p style={contactText}>
+                                07557987521@gmail.com
+                            </p>
+                        </a>
+                        <a style={personalDetails}>
+                            <HiOutlineLocationMarker style={detailsIcon} />
+                            <p style={contactText}>
+                                Suffolk, England
+                            </p>
+                        </a>
                     </div>
                 </div>
                 <Button style={sendButton} variant="contained" >
@@ -130,8 +140,8 @@ const input = {
     width: '100%',
     borderColor: '#F56539',
     backgroundColor: '#212121',
-    border: '4px solid'
-
+    border: '4px solid',
+    
 }
 
 const formMessage = { height: '150px' }
@@ -188,3 +198,22 @@ const detailsIcon = {
     }
 }
 
+const detailGroup = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'space-evenly',
+    flex: '0.6 1',
+    boxSizing: 'border-box',
+    paddingLeft: '7rem',
+    marginTop: '1.2rem'
+}
+
+const personalDetails = {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    width: '100%',
+    marginBottom : '2.5rem'
+}
