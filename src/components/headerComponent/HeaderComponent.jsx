@@ -1,6 +1,6 @@
 import React from 'react'
 import headshot from '../headerComponent/JoePortrait.png'
-import { Grid, Button } from '@mui/material'
+import {  Button } from '@mui/material'
 import { Link } from 'react-scroll'
 import {
     FaLinkedin,
@@ -25,7 +25,6 @@ export default () => {
                     </div>
                     <img src={headshot} style={portraitImage} alt="" />
                
-
                 <div style={landingContainerRight}>
                     <FadeIn  >
                         <div style={{...lcrContent,...landingContainerRight}}>
@@ -45,10 +44,7 @@ export default () => {
                                 <Button variant="contained" style={lcrProjectButton}>
                                     <Link to="projects" spy={true} smooth={true}><p style={projectText}>Download CV</p></Link>
                                 </Button>
-                            </div>
-                        
-                       
-                       
+                            </div>          
                         </div>         
                     </FadeIn> 
                     </div>

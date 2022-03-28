@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import FadeIn from 'react-fade-in';
-import { Button,Box } from '@mui/material'
 import {
     FaGithub,
     FaYoutube
@@ -86,20 +85,6 @@ export default () => {
     )
 }
 
-const text = {
-    textAlign: "center",
-    color: "#999999"
-}
-
-const image = {
-    width: '100%',
-    height: '60%',
-}
-    
-const imageContainer = {
-    display: 'flex',
-    justifyContent: 'center',
-}
 
 const projectContainer = {
     backgroundColor: "#212121",
@@ -192,17 +177,6 @@ const projectSkillText = {
     color: '#EAEAEA'
 }
 
-const videoButton = {
-    backgroundColor: '#212121',
-    borderRadius: 28,
-    
-}
-
-const videoText = {
-    color: '#f56539',
-    fontSize: '16px',
-    fontWeight: '600'
-}
 
 const detailsIcon = {
     backgroundColor: '#212121',

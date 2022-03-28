@@ -1,9 +1,8 @@
-import React, { useContext, useRef } from 'react';
+import React, {  useRef } from 'react';
 import Image from '../project/projectImages/reactImage.jpg'
 import Image2 from '../project/projectImages/reactNativeImage.png'
 import Slider from 'react-slick';
-import { FaQuoteLeft, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
-import { Button } from '@mui/material';
+import {  FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 var items = [{
     id: 1,
     text: 'React',
@@ -153,8 +152,4 @@ const slider = {
     alignItems: 'center',
     textAlign: 'center',
     width: '70%'
-}
-const carouselContainer = {
-    height: '50%',
-    paddingBottom: '3.5rem'
 }
