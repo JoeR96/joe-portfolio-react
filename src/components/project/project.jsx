@@ -1,43 +1,82 @@
-import React from 'react'
-import { Grid } from '@mui/material'
-import { Button } from '@mui/material'
-import ReactIcon from './projectImages/reactImage.jpg'
-import Fade from 'react-reveal'
+import React, { useContext } from 'react'
+import FadeIn from 'react-fade-in';
+import { Button,Box } from '@mui/material'
+import {
+    FaGithub,
+    FaYoutube
+} from 'react-icons/fa';
+
 export default () => {
     return (
         <div style={projectContainer}>
             <div style={projectHeader}>
             </div>
-            <div style={projectBody}>
+            <div style={projectBody} >
                 <div style={project}>
                     <div style={projectContent}>
+                        <FadeIn delay={180} style={projectSkills}>
+                        <div style={projectDescription}>
+                         
+                        </div>
+                        <h2 style={projectHeaderText}>Project Power</h2>
+                            <p style={projectSkillText}></p>
+                            <p style={projectSkillText}>SQL</p>
+                            <p style={projectSkillText}>.NET 6 Web API</p>
+                            <p style={projectSkillText}>Entity Framework</p>
+                            <p style={projectSkillText}>Hosted on Ubuntu  VPS</p>
+                        
+                        </FadeIn>
+
+                        <div style={projectButtons}>
+                            <div >
+                                <a style={detailsIcon} href="bbc.co.uk"><FaYoutube /></a>
+                            </div>
+                            <div >
+                                <a style={detailsIcon} href="bbc.co.uk"><FaGithub /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style={project}>
+                    <div style={projectContent}>
+                        <FadeIn delay={180} style={projectSkills}>
+
                         <div style={projectDescription}>
 
                         </div>
-                        <h2 style={projectHeaderText}>Project Power</h2>
+                        <h2 style={projectHeaderText}>Project Power Web Dashboard</h2>
+                            <p style={projectSkillText}>React</p>
+                            <p style={projectSkillText}>Material UI</p>
+                            <p style={projectSkillText}>React DnD</p>
+                        </FadeIn>
+                       
                         <div style={projectButtons}>
-                            <a href="bbc.co.uk">A</a>
-                            <a href="bbc.co.uk">Y</a>
+                            <div >
+                                <a style={detailsIcon} href="bbc.co.uk"><FaYoutube /></a>
+                            </div>
+                            <div >
+                                <a style={detailsIcon} href="bbc.co.uk"><FaGithub /></a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div style={project}>
                     <div style={projectContent}>
-                        <h2 style={projectHeaderText}>Project Power</h2>
-                        <div style={projectButtons}>
-                            <a href="bbc.co.uk">A</a>
-                            <a href="bbc.co.uk">Y</a>
+                        <FadeIn delay={180} style={projectSkills}>
+                        <div style={projectDescription}>
 
                         </div>
-                    </div>
-                </div>
-                <div style={project}>
-                    <div style={projectContent}>
-                        <h2 style={projectHeaderText}>Project Power</h2>
+                        <h2 style={projectHeaderText}>Project Power Mobile App</h2>
+                            <p style={projectSkillText}>React Native</p>       
+                        </FadeIn>
+                        
                         <div style={projectButtons}>
-                            <a href="bbc.co.uk">A</a>
-                            <a href="bbc.co.uk">Y</a>
-
+                            <div >
+                                <a style={detailsIcon} href="bbc.co.uk"><FaYoutube /></a>
+                            </div>
+                            <div >
+                                <a style={detailsIcon} href="bbc.co.uk"><FaGithub aria-label='GitHub'/></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,6 +103,7 @@ const imageContainer = {
 
 const projectContainer = {
     backgroundColor: "#212121",
+    minHeight: '50vh',
 
 }
 
@@ -104,7 +144,7 @@ const projectBody = {
 
 const projectHeaderText = {
     fontWeight: '600',
-    fontSize: '1.525rem',
+    fontSize: '2rem',
     lineHeight: '110%',
     textAlign: 'center',
     color: '#EAEAEA'
@@ -138,5 +178,47 @@ const projectDescription = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
+}
 
+const projectSkills = {
+    position: 'relative'   
+}
+
+const projectSkillText = {
+    fontWeight: '600',
+    fontSize: '1.25rem',
+    lineHeight: '110%',
+    textAlign: 'center',
+    color: '#EAEAEA'
+}
+
+const videoButton = {
+    backgroundColor: '#212121',
+    borderRadius: 28,
+    
+}
+
+const videoText = {
+    color: '#f56539',
+    fontSize: '16px',
+    fontWeight: '600'
+}
+
+const detailsIcon = {
+    backgroundColor: '#212121',
+    color: '#EFEFEF',
+    borderRadius: '50%',
+    width: '45px',
+    height: '45px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '23px',
+    transition: '250ms ease-in-out',
+    flexShrink: 0,
+    '&:hover': {
+        transform: 'scale(1.1)',
+        color: '#212121',
+        backgroundColor: '#EFEFEF',
+    }
 }

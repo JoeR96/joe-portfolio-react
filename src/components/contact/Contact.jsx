@@ -1,9 +1,8 @@
 import React from "react";
 import { Grid, Card, CardContent, Button } from "@mui/material";
 import { Link } from 'react-scroll'
-import {
-    FontAwesomeIcon
-} from "@fortawesome/react-fontawesome";
+import { FiPhone, FiAtSign } from 'react-icons/fi';
+
 
 export default function Contact() {
     return (
@@ -46,9 +45,15 @@ export default function Contact() {
                         </form>
                     </div>
                     <div style={contactDetails}>
+                        <div style={detailsIcon}>
+                            <FiPhone />
+                        </div>
                         <p style={contactText}>
                             07557987521
                         </p>
+                        <div style={detailsIcon}>
+                            <FiAtSign />
+                        </div>
                         <p style={contactText}>
                             joeyrichardson96@gmail.com
                         </p>
@@ -162,3 +167,24 @@ const sendText = {
     fontSize: '16px',
     fontWeight: '600'
 }
+
+const detailsIcon = {
+    backgroundColor: '#212121',
+    color: '#EFEFEF',
+    borderRadius: '50%',
+    width: '45px',
+    height: '45px',
+    display: 'flex',
+    margin: '0 1rem',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '23px',
+    transition: '250ms ease-in-out',
+    flexShrink: 0,
+    '&:hover': {
+        transform: 'scale(1.1)',
+        color: '#212121',
+        backgroundColor: '#EFEFEF',
+    }
+}
+

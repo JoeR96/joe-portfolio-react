@@ -1,21 +1,25 @@
 import React from 'react'
+import FadeIn from 'react-fade-in';
+
 
 export default () => {
     return (
         <div style={about} id="about">
-             <div style={lineStyling}>
-                <div style={circle}></div>
-                <div style={circle}></div>
-                <div style={styleLine}></div>
-            </div> 
-            <div style={aboutBody}>
-                
-                <div style={aboutDescription}>
-                    <h2 style={h2text}>What I do</h2>
-                    <p style={descriptionText}>His palms are sweaty, knees weak, arms are heavy There's vomit on his sweater already, mom's spaghetti He's nervous, but on the surface he looks calm and ready To drop bombs, but he keeps on forgetting What he wrote down, the whole crowd goes so loud He opens his mouth, but the words won't come out He's choking, how? Everybody's joking now</p>
-                </div>       
+            <FadeIn delay={360}>
+                <div style={lineStyling}>
+                    <div style={circle}></div>
+                    <div style={circle}></div>
+                    <div style={styleLine}></div>
+                </div> 
+                <div style={aboutBody}>
+                    
+                    <div style={aboutDescription}>
+                        <h2 style={h2text}>What I do</h2>
+                        <p style={descriptionText}>His palms are sweaty, knees weak, arms are heavy There's vomit on his sweater already, mom's spaghetti He's nervous, but on the surface he looks calm and ready To drop bombs, but he keeps on forgetting What he wrote down, the whole crowd goes so loud He opens his mouth, but the words won't come out He's choking, how? Everybody's joking now</p>
+                    </div>       
+                    </div>
+            </FadeIn>
             </div>
-        </div>
     )
    
 }
@@ -23,7 +27,9 @@ export default () => {
 const about = {
     position: 'relative',
     backgroundColor: '#212121',
-    paddingBottom: '8rem'
+    paddingBottom: '8rem',
+    minHeight: '50vh',
+
 }
 
 const lineStyling = {

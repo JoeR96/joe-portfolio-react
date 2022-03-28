@@ -2,46 +2,59 @@ import React from 'react'
 import headshot from '../headerComponent/JoePortrait.png'
 import { Grid, Button } from '@mui/material'
 import { Link } from 'react-scroll'
-import { GoMarkGithub } from "react-icons/go";
-import { SiLinkedin } from "react-icons/si";
-import { slide as Menu } from 'react-burger-menu'
+import {
+    FaLinkedin,
+    FaGithub,
+
+} from 'react-icons/fa';
+import FadeIn from 'react-fade-in';
 
 export default () => {
     return (
-        <div id="header" style={landing}>
-            <div style={landingContainer}>
+            <div id="header" style={landing}>
+                <div style={landingContainer}>
                 <div style={landingContainerLeft}>
-                    <div style={lclContent}>
-                        <a style={icon} href="https://github.com/JoeR96"><GoMarkGithub /></a>
-                        <a style={icon} href="https://Linkedin.com/JoeR96"><SiLinkedin /></a>
-                    </div>
-                </div>
-                <img src={headshot} style={portraitImage} alt="" />
-                
-                <div style={landingContainerRight}>
-                    <div style={lcrContent}>
-                        <h6 style={lcrh6}>Junior Full Stack Developer</h6>
-                        <h1 style={lcrh1}>Joe Richardson</h1>
-                        <p>His palms are sweaty, knees weak, arms are heavy
-                            There's vomit on his sweater already, mom's spaghetti
-                            He's nervous, but on the surface he looks calm and ready
-                            To drop bombs, but he keeps on forgetting
-                            What he wrote down, the whole crowd goes so loud
-                            He opens his mouth, but the words won't come out
-                            He's choking, how? Everybody's joking now</p>
-                        <div style={lcrButtonContainer}>
-                            <Button variant="outlined" style={lcrContactButton} >
-                                <Link to="contact" spy={true} smooth={true}><p>Contact Me</p></Link>
-                            </Button>
-                            <Button variant="contained" style={lcrProjectButton}>
-                                <Link to="projects" spy={true} smooth={true}><p style={projectText}>Download CV</p></Link>
-                            </Button>
+                    <FadeIn >
+
+                        <div style={lclContent}>
+                            <a href="https://github.com/JoeR96"><FaGithub style={detailsIcon} /></a>
+                            <a href="https://Linkedin.com/JoeR96"><FaLinkedin style={detailsIcon} /></a>
                         </div>
-                    </div>            
+                    </FadeIn>
+
+                    </div>
+                    <img src={headshot} style={portraitImage} alt="" />
+               
+
+                <div style={landingContainerRight}>
+                    <FadeIn  >
+                        <div style={{...lcrContent,...landingContainerRight}}>
+                            <h6 style={lcrh6}>Junior Full Stack Developer</h6>
+                            <h1 style={lcrh1}>Joe Richardson</h1>
+                            <p>His palms are sweaty, knees weak, arms are heavy
+                                There's vomit on his sweater already, mom's spaghetti
+                                He's nervous, but on the surface he looks calm and ready
+                                To drop bombs, but he keeps on forgetting
+                                What he wrote down, the whole crowd goes so loud
+                                He opens his mouth, but the words won't come out
+                                He's choking, how? Everybody's joking now</p>
+                            <div style={lcrButtonContainer}>
+                                <Button variant="outlined" style={lcrContactButton} >
+                                    <Link to="contact" spy={true} smooth={true}><p>Contact Me</p></Link>
+                                </Button>
+                                <Button variant="contained" style={lcrProjectButton}>
+                                    <Link to="projects" spy={true} smooth={true}><p style={projectText}>Download CV</p></Link>
+                                </Button>
+                            </div>
+                        
+                       
+                       
+                        </div>         
+                    </FadeIn> 
+                    </div>
+                
                 </div>
             </div>
-        </div>
-        
             
     )
 }
@@ -88,12 +101,15 @@ const portraitImage = {
 const lcrContent = {
     color: 'white',
     width: '45%',
-    marginRight: '14rem'
+    marginLeft: '25rem',
+    marginRight: '25rem'
 }
 
 const lclContent = {
-    alignItems:'center',
+    alignItems: 'center',
+    display: 'flex',
     width: '100%',
+    justifyContent: 'flex-start',
     margin:'3rem'
 }
 
@@ -135,3 +151,24 @@ const lcrProjectButton = {
 }
 
 const projectText = { color: 'black', fontWeight: '500' }
+
+const detailsIcon = {
+    color: '#212121',
+    borderRadius: '50%',
+    width: '45px',
+    height: '45px',
+    display: 'flex',
+    margin: '0 1rem',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '23px',
+    transition: '250ms ease-in-out',
+    flexShrink: 0,
+    '&:hover': {
+        transform: 'scale(1.1)',
+        color: '#212121',
+        backgroundColor: '#EFEFEF',
+    }
+}
+
+

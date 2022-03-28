@@ -4,12 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '@fontsource/roboto/400.css';
+import ThemeContextProvider from './context/ThemeContext/ThemeContext'
 
 ReactDOM.render(
+  
+
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <ThemeContextProvider>
+      <App />
+
+</ThemeContextProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
+
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -7,14 +7,13 @@ import '@fontsource/roboto/400.css';
 import { ThemeProvider } from '@emotion/react'
 import About from './components/about/About'
 import UniversityContainer from './components/uniProjects/UniversityContainer'
-
 function App() {
   return (
       <div className="App">
       {/* <Navbar></Navbar> */}
       <HeaderComponent />
-      <About/>
-      <Project></Project>
+      <About s/>
+      <Project ></Project>
       <UniversityContainer></UniversityContainer>
         <div id="contact" style={contactStyle}>
           <Contact></Contact>
