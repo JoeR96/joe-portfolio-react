@@ -25,7 +25,18 @@ export default () => {
 
                 style={projectBody} >
                 <div style={project}>
-                    <div style={projectContent}>
+                    <motion.div
+                        initial={{ y: -125 }}
+                        whileInView={{
+                            y: 0,
+                        }}
+                        transition={{
+                            delay: 0,
+                            default: { duration: 0.33 },
+                            type: "spring",
+                            stiffness: 100
+                        }}
+                        style={projectContent}>
                         <div style={projectDescription}>
                          
                         </div>
@@ -42,14 +53,21 @@ export default () => {
                                 <a style={detailsIcon} href="bbc.co.uk"><FaGithub /></a>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
                 <div style={project}>
-                    <div style={projectContent}>
-
-                        <div style={projectDescription}>
-
-                        </div>
+                    <motion.div
+                        initial={{ y: -125 }}
+                        whileInView={{
+                            y: 0,
+                        }}
+                        transition={{
+                            delay: 0,
+                            default: { duration: 0.33 },
+                            type: "spring",
+                            stiffness: 100
+                        }}
+                        style={projectContent}>
                         <h2 style={projectHeaderText}>Project Power Web Dashboard</h2>
                             <p style={projectSkillText}>React</p>
                             <p style={projectSkillText}>Material UI</p>
@@ -63,10 +81,21 @@ export default () => {
                                 <a style={detailsIcon} href="bbc.co.uk"><FaGithub /></a>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
                 <div style={project}>
-                    <div style={projectContent}>
+                    <motion.div
+                        initial={{ y: -125 }}
+                        whileInView={{
+                            y: 0,
+                        }}
+                        transition={{
+                            delay: 0,
+                            default: { duration: 0.33 },
+                            type: "spring",
+                            stiffness: 100
+                        }}
+                        style={projectContent}>
                         <div style={projectDescription}>
 
                         </div>
@@ -81,13 +110,14 @@ export default () => {
                                 <a style={detailsIcon} href="bbc.co.uk"><FaGithub aria-label='GitHub'/></a>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </motion.div>
         </div>
         
     )
 }
+
 
 
 const projectContainer = {
