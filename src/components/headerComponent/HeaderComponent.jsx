@@ -10,27 +10,14 @@ import {
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox'; import { motion } from 'framer-motion';
 export default () => {
-    const [value, setValue] = React.useState(30);
-    const [rotationSpeed, setRotationSpeed] = React.useState(0);
-    const [scale, setScale] = React.useState(1);
-    const [scaleSlider, setScaleSlider] = React.useState(1);
-
+    const [value, setValue] = React.useState(1);
+    const [scale, setScale] = React.useState(0.000121);
+    const [rotationSpeed, setRotationrotationSpeed] = React.useState(36);
     const handleChange = (event, newValue) => {
-        setValue(newValue );
+        setValue(newValue);
+        setScale(newValue)
+        setRotationrotationSpeed(newValue)
     };
-
-    useEffect(() => {
-        handleRotationChange(value)
-    }, [value])
-    
-    useEffect(() => {
-        setScale(scaleSlider * 1.5 )
-    }, [scaleSlider])
-
-    const handleRotationChange = (v) => {
-        setRotationSpeed(v * 360);
-    };
-
 
     return (
         <div id="header" style={landing}>
@@ -41,7 +28,7 @@ export default () => {
                         initial={{ x: "-125vh" }}
                         transition={{
                             delay: 0.125,
-                            default: { duration: 0.5 },
+                            default: { duration: 0.8 },
                             type: "spring",
                             stiffness: 100
                         }}
@@ -70,7 +57,7 @@ export default () => {
                     initial={{ y: "-125vh" }}
                     transition={{
                         delay: 0.125,
-                        default: { duration: 0.5 },
+                        default: { duration: 0.8 },
                         type: "spring",
                         stiffness: 100
                     }}
@@ -89,7 +76,7 @@ export default () => {
                         initial={{ x: "125vh" }}
                         transition={{
                             delay: 0.125,
-                            default: { duration: 0.5 },
+                            default: { duration: 0.8 },
                             type: "spring",
                             stiffness: 100
                         }}

@@ -3,14 +3,37 @@ import { Grid, Card, CardContent, Button } from "@mui/material";
 import { Link } from 'react-scroll'
 import { FiPhone, FiAtSign } from 'react-icons/fi';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
-
+import { motion } from "framer-motion";
 export default function Contact() {
     return (
         <div style={contacts}>
             <div>  
-                <h1 style={h1Style}>Contacts</h1>
+                <motion.h1
+                    initial={{ y: "-100vh" }}
+                    animate={{
+                        y: 0,
+                    }}
+                    transition={{
+                        delay: 0,
+                        default: { duration: 1 },
+                        type: "spring",
+                        stiffness: 100
+                    }}
+                    style={h1Style}>Contacts</motion.h1>
                 <div style={contactsBody}>
-                    <div style={contactsForm}>
+                    <motion.div
+                        initial={{ x: "-125vh" }}
+                        animate={{
+                            x: 0,
+                        }}
+                        transition={{
+                            delay: 0,
+                            default: { duration: 1 },
+                            type: "spring",
+                            stiffness: 100
+                        }}
+
+                        style={contactsForm}>
                         <form>
                             <div style={inputContainer}>
                                 <label
@@ -47,8 +70,19 @@ export default function Contact() {
                                 ></input>
                             </div>
                         </form>
-                    </div>
-                    <div style={detailGroup}>
+                    </motion.div>
+                    <motion.div
+                        initial={{ x: "125vh" }}
+                        animate={{
+                            x: 0,
+                        }}
+                        transition={{
+                            delay: 0,
+                            default: { duration: 1 },
+                            type: "spring",
+                            stiffness: 100
+                        }}
+                        style={detailGroup}>
                         <a style={personalDetails}>
                             <FiPhone style={detailsIcon} />
                             <p style={contactText}>
@@ -67,11 +101,22 @@ export default function Contact() {
                                 Dave, Davidson
                             </p>
                         </a>
-                    </div>
+                    </motion.div>
                 </div>
-                <Button style={sendButton} variant="contained" >
+                <motion.Button
+                    initial={{ y: "125vh" }}
+                    animate={{
+                        y: 0,
+                    }}
+                    transition={{
+                        delay: 0,
+                        default: { duration: 1 },
+                        type: "spring",
+                        stiffness: 100
+                    }}
+                    style={sendButton} variant="contained" >
                     <Link to="header" spy={true} smooth={true}><p style={sendText}>Send</p></Link>
-                </Button>
+                </motion.Button>
                 <Button variant="contained" >
                     <Link to="header" spy={true} smooth={true}><p>Return</p></Link>
                 </Button>
@@ -84,7 +129,7 @@ const contacts = {
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'flex-start',
     position: 'relative'
 }
@@ -92,7 +137,8 @@ const contacts = {
 const h1Style = {
     fontSize: '3.5rem',
     marginBottom: '2.5rem',
-    color: '#F56539'
+    paddingLeft: '6.14rem',
+    color: '#F56539',
 }
 
 const contactsBody = {
