@@ -34,8 +34,8 @@ export default () => {
                         }}
                         animate={{ x: 0 }}
                         style={lclContent}>
-                            <a href="https://github.com/JoeR96"><FaGithub style={detailsIcon} /></a>
-                            <a href="https://Linkedin.com/JoeR96"><FaLinkedin style={detailsIcon} /></a>
+                            <a href="https://github.com/"><FaGithub style={detailsIcon} /></a>
+                            <a href="https://Linkedin.com/"><FaLinkedin style={detailsIcon} /></a>
                         <Box sx={{
                             width: 250,
                             padding: '2rem'
