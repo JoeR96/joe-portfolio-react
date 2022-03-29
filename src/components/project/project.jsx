@@ -1,19 +1,31 @@
 import React from 'react'
-import FadeIn from 'react-fade-in';
 import {
     FaGithub,
     FaYoutube
 } from 'react-icons/fa';
+import { motion } from "framer-motion"
 
 export default () => {
     return (
-        <div style={projectContainer}>
+        <div
+            style={projectContainer}>
             <div style={projectHeader}>
             </div>
-            <div style={projectBody} >
+            <motion.div
+                initial={{ x: "-125vh" }}
+                animate={{
+                    x: 0,
+                }}
+                transition={{
+                    delay: 0,
+                    default: { duration: 1.25 },
+                    type: "spring",
+                    stiffness: 100
+                }}
+
+                style={projectBody} >
                 <div style={project}>
                     <div style={projectContent}>
-                        <FadeIn delay={180} visible={true} style={projectSkills}>
                         <div style={projectDescription}>
                          
                         </div>
@@ -24,7 +36,6 @@ export default () => {
                             <p style={projectSkillText}>Entity Framework</p>
                             <p style={projectSkillText}>Hosted on Ubuntu  VPS</p>
                         
-                        </FadeIn>
 
                         <div style={projectButtons}>
                             <div >
@@ -38,7 +49,6 @@ export default () => {
                 </div>
                 <div style={project}>
                     <div style={projectContent}>
-                        <FadeIn delay={180} visible={true} style={projectSkills}>
 
                         <div style={projectDescription}>
 
@@ -47,7 +57,6 @@ export default () => {
                             <p style={projectSkillText}>React</p>
                             <p style={projectSkillText}>Material UI</p>
                             <p style={projectSkillText}>React DnD</p>
-                        </FadeIn>
                        
                         <div style={projectButtons}>
                             <div >
@@ -61,13 +70,11 @@ export default () => {
                 </div>
                 <div style={project}>
                     <div style={projectContent}>
-                        <FadeIn delay={180} visible={true} style={projectSkills}>
                         <div style={projectDescription}>
 
                         </div>
                         <h2 style={projectHeaderText}>Project Power Mobile App</h2>
                             <p style={projectSkillText}>React Native</p>       
-                        </FadeIn>
                         
                         <div style={projectButtons}>
                             <div >
@@ -79,7 +86,7 @@ export default () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
         
     )

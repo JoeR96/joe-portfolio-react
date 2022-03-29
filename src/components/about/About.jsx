@@ -1,11 +1,9 @@
 import React from 'react'
-import FadeIn from 'react-fade-in';
-
+import { motion } from 'framer-motion'
 
 export default () => {
     return (
         <div style={about} id="about">
-            <FadeIn delay={360} visible={true}>
                 <div style={lineStyling}>
                     <div style={circle}></div>
                     <div style={circle}></div>
@@ -13,12 +11,25 @@ export default () => {
                 </div> 
                 <div style={aboutBody}>
                     
-                    <div style={aboutDescription}>
+                <motion.div
+                    initial={{
+                        y: "-25vh",
+                opacity:0    }}
+                    animate={{
+                        y: 0,
+                        opacity:1
+                    }}
+                    transition={{
+                        delay: 0.3635,
+                        default: { duration: 0.5 },
+                        type: "spring",
+                        stiffness: 100
+                    }}
+                    style={aboutDescription}>
                         <h2 style={h2text}>What I do</h2>
                         <p style={descriptionText}>His palms are sweaty, knees weak, arms are heavy There's vomit on his sweater already, mom's spaghetti He's nervous, but on the surface he looks calm and ready To drop bombs, but he keeps on forgetting What he wrote down, the whole crowd goes so loud He opens his mouth, but the words won't come out He's choking, how? Everybody's joking now</p>
-                    </div>       
+                    </motion.div>       
                     </div>
-            </FadeIn>
             </div>
     )
    

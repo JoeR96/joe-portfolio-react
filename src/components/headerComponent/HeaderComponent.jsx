@@ -7,7 +7,6 @@ import {
     FaGithub,
 
 } from 'react-icons/fa';
-import FadeIn from 'react-fade-in';
 
 export default () => {
     const [visible, setVisible] = useState(false);
@@ -17,13 +16,11 @@ export default () => {
             <Button onClick={() => setVisible(true)}></Button>
                 <div style={landingContainer}>
                 <div style={landingContainerLeft}>
-                    <FadeIn visible={visible} >
 
                         <div style={lclContent}>
                             <a href="https://github.com/JoeR96"><FaGithub style={detailsIcon} /></a>
                             <a href="https://Linkedin.com/JoeR96"><FaLinkedin style={detailsIcon} /></a>
                         </div>
-                    </FadeIn>
 
                     </div>
                     <img src={headshot} style={portraitImage} alt="" />

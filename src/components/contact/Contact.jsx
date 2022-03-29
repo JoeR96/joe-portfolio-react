@@ -52,19 +52,19 @@ export default function Contact() {
                         <a style={personalDetails}>
                             <FiPhone style={detailsIcon} />
                             <p style={contactText}>
-                                joeyrichardson96@gmail.com
+                                bobdylan@gmail.com
                             </p>
                         </a>
                         <a style={personalDetails}>
                             <FiAtSign style={detailsIcon} />
                             <p style={contactText}>
-                                07557987521@gmail.com
+                                123-456-789
                             </p>
                         </a>
                         <a style={personalDetails}>
                             <HiOutlineLocationMarker style={detailsIcon} />
                             <p style={contactText}>
-                                Suffolk, England
+                                Dave, Davidson
                             </p>
                         </a>
                     </div>
