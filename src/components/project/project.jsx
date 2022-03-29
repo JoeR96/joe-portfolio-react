@@ -13,7 +13,7 @@ export default () => {
             </div>
             <motion.div
                 initial={{ x: "-125vh" }}
-                animate={{
+                whileInView={{
                     x: 0,
                 }}
                 transition={{

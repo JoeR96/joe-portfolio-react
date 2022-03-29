@@ -15,12 +15,12 @@ export default () => {
                     initial={{
                         y: "-25vh",
                 opacity:0    }}
-                    animate={{
+                    whileInView={{
                         y: 0,
                         opacity:1
                     }}
                     transition={{
-                        delay: 0.3635,
+                        delay: 0.125,
                         default: { duration: 0.5 },
                         type: "spring",
                         stiffness: 100
