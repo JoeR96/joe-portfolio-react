@@ -89,15 +89,6 @@ const contacts = {
     position: 'relative'
 }
 
-const contactsContainer = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    width: '80%',
-    height: '100%',
-    marginTop: '2rem'
-}
-
 const h1Style = {
     fontSize: '3.5rem',
     marginBottom: '2.5rem',
@@ -138,13 +129,19 @@ const input = {
     marginBottom: '2rem',
     padding: '0.7rem',
     width: '100%',
-    borderColor: '#F56539',
     backgroundColor: '#212121',
-    border: '4px solid',
-    
+    border: '4px solid #F56539',
+
 }
 
-const formMessage = { height: '150px' }
+const formMessage = {
+    height: '150px',
+    color: '#EAEAEA',
+    fontSize: '24px',
+    lineHeight: '110%',
+    wordBreak: 'word-break',
+    fontWeight: '600'
+}
 const contactText = {
     color: '#EAEAEA',
     width: '45%',
@@ -169,7 +166,8 @@ const contactDetails = {
 const sendButton = {
     backgroundColor: '#f56539',
     width: '150px',
-    borderRadius: 28
+    height: '50px',
+    borderRadius: 35
 }
 
 const sendText = {

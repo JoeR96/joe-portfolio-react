@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import headshot from '../headerComponent/JoePortrait.png'
 import {  Button } from '@mui/material'
 import { Link } from 'react-scroll'
@@ -10,11 +10,14 @@ import {
 import FadeIn from 'react-fade-in';
 
 export default () => {
+    const [visible, setVisible] = useState(false);
+
     return (
-            <div id="header" style={landing}>
+        <div id="header" style={landing}>
+            <Button onClick={() => setVisible(true)}></Button>
                 <div style={landingContainer}>
                 <div style={landingContainerLeft}>
-                    <FadeIn visible={true} >
+                    <FadeIn visible={visible} >
 
                         <div style={lclContent}>
                             <a href="https://github.com/JoeR96"><FaGithub style={detailsIcon} /></a>
