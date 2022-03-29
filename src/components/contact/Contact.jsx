@@ -3,14 +3,14 @@ import { Grid, Card, CardContent, Button } from "@mui/material";
 import { Link } from 'react-scroll'
 import { FiPhone, FiAtSign } from 'react-icons/fi';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
-import { motion } from "framer-motion";
+import { motion, } from "framer-motion";
 export default function Contact() {
     return (
         <div style={contacts}>
             <div>  
                 <motion.h1
-                    initial={{ y: "-100vh" }}
-                    animate={{
+                    initial={{ y: 125 }}
+                    whileInView={{
                         y: 0,
                     }}
                     transition={{
@@ -22,8 +22,8 @@ export default function Contact() {
                     style={h1Style}>Contacts</motion.h1>
                 <div style={contactsBody}>
                     <motion.div
-                        initial={{ x: "-125vh" }}
-                        animate={{
+                        initial={{ x: 125 }}
+                        whileInView={{
                             x: 0,
                         }}
                         transition={{
@@ -72,8 +72,8 @@ export default function Contact() {
                         </form>
                     </motion.div>
                     <motion.div
-                        initial={{ x: "125vh" }}
-                        animate={{
+                        initial={{ x: 125 }}
+                        whileInView={{
                             x: 0,
                         }}
                         transition={{
@@ -104,13 +104,16 @@ export default function Contact() {
                     </motion.div>
                 </div>
                 <motion.Button
-                    initial={{ y: "125vh" }}
-                    animate={{
+                    initial={{
+                        y: 125,
+                    opacity: 0}}
+                    whileInView={{
                         y: 0,
+                        opacity: 1
                     }}
                     transition={{
                         delay: 0,
-                        default: { duration: 1 },
+                        default: { duration: 0.8 },
                         type: "spring",
                         stiffness: 100
                     }}

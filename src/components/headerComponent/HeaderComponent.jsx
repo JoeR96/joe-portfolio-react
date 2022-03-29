@@ -84,7 +84,7 @@ export default () => {
                         style={{ ...lcrContent, ...landingContainerRight }}>
                         
   
-                            <h6 style={lcrh6}>Junior Full Stack Developer</h6>
+                            <h6 style={lcrh6}>Carnage Creator</h6>
                             <h1 style={lcrh1}>Joe Richardson</h1>
                             <p>His palms are sweaty, knees weak, arms are heavy
                                 There's vomit on his sweater already, mom's spaghetti

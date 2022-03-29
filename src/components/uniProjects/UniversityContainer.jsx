@@ -54,8 +54,8 @@ export default () => {
         <div style={container}>
             <div style={header}>
                 <motion.h1
-                    initial={{ x: "-125vh" }}
-                    animate={{
+                    initial={{ x: -400 }}
+                    whileInView={{
                         x: 0,
                     }}
                     transition={{
@@ -70,8 +70,8 @@ export default () => {
 
                 <div style={slider}>
                     <motion.div
-                        initial={{ x: "125vh" }}
-                        animate={{
+                        initial={{ x: 400 }}
+                        whileInView={{
                             x: 0,
                         }}
                         transition={{
