@@ -10,12 +10,13 @@ import {
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox'; import { motion } from 'framer-motion';
 export default () => {
-    const [value, setValue] = React.useState(1);
+    const [value, setValue] = React.useState(100);
     const [scale, setScale] = React.useState(0.000121);
     const [rotationSpeed, setRotationrotationSpeed] = React.useState(36);
     const handleChange = (event, newValue) => {
+        console.log(newValue)
         setValue(newValue);
-        setScale(newValue)
+        setScale(newValue / 50)
         setRotationrotationSpeed(newValue)
     };
 
@@ -40,7 +41,9 @@ export default () => {
                             width: 250,
                             padding: '2rem'
                         }}>
-                            <h2>Spin me around!</h2>
+                            <h2 style={{
+                                textAlign: 'center',
+                            color:'#EAEAEA'}}>Zoom!</h2>
                             <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
                                 <IndeterminateCheckBoxIcon />
                                 <Slider style={sliderStyle}

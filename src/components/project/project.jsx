@@ -32,7 +32,7 @@ export default () => {
                         }}
                         transition={{
                             delay: 0,
-                            default: { duration: 0.33 },
+                            default: { duration: 0.8 },
                             type: "spring",
                             stiffness: 100
                         }}
@@ -63,7 +63,7 @@ export default () => {
                         }}
                         transition={{
                             delay: 0,
-                            default: { duration: 0.33 },
+                            default: { duration: 0.8 },
                             type: "spring",
                             stiffness: 100
                         }}
@@ -91,7 +91,7 @@ export default () => {
                         }}
                         transition={{
                             delay: 0,
-                            default: { duration: 0.33 },
+                            default: { duration: 0.8 },
                             type: "spring",
                             stiffness: 100
                         }}

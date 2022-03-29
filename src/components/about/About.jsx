@@ -21,7 +21,7 @@ export default () => {
                     }}
                     transition={{
                         delay: 0.125,
-                        default: { duration: 0.5 },
+                        default: { duration: 0.8 },
                         type: "spring",
                         stiffness: 100
                     }}
