@@ -28,7 +28,7 @@ export default () => {
     }, [scaleSlider])
 
     const handleRotationChange = (v) => {
-        setRotationSpeed(v * 36);
+        setRotationSpeed(v * 360);
     };
 
 
@@ -40,18 +40,22 @@ export default () => {
                         <div style={lclContent}>
                             <a href="https://github.com/JoeR96"><FaGithub style={detailsIcon} /></a>
                             <a href="https://Linkedin.com/JoeR96"><FaLinkedin style={detailsIcon} /></a>
+                        <Box sx={{
+                            width: 250,
+                            padding: '2rem'
+                        }}>
+                            <h2>Spin me around!</h2>
+                            <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
+                                <IndeterminateCheckBoxIcon />
+                                <Slider style={sliderStyle}
+                                    aria-label="Volume" value={value}
+                                    onChange={handleChange} />
+                                <AddBoxIcon />
+                            </Stack>
+                        </Box>
                     </div>
                     
-                    <Box sx={{ width: 200 }}>
-                        <h2>Spin me around!</h2>
-                        <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
-                            <IndeterminateCheckBoxIcon />
-                            <Slider style={sliderStyle}
-                                aria-label="Volume" value={value}
-                                onChange={handleChange} />
-                            <AddBoxIcon />
-                        </Stack>
-                    </Box>
+                    
                 </div>
                 <motion.img
                     whileHover={{
