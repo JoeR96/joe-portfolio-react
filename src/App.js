@@ -14,7 +14,6 @@ function App() {
       <HeaderComponent />
       <About s/>
       <Project ></Project>
-      <UniversityContainer></UniversityContainer>
         <div id="contact" style={contactStyle}>
           <Contact></Contact>
         </div>

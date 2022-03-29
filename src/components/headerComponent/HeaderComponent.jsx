@@ -1,32 +1,72 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import headshot from '../headerComponent/JoePortrait.png'
-import {  Button } from '@mui/material'
+import { Button, Slider, Stack,Box } from '@mui/material'
 import { Link } from 'react-scroll'
 import {
     FaLinkedin,
     FaGithub,
 
 } from 'react-icons/fa';
-
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox'; import { motion } from 'framer-motion';
 export default () => {
-    const [visible, setVisible] = useState(false);
+    const [value, setValue] = React.useState(30);
+    const [rotationSpeed, setRotationSpeed] = React.useState(0);
+    const [scale, setScale] = React.useState(1);
+    const [scaleSlider, setScaleSlider] = React.useState(1);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue );
+    };
+
+    useEffect(() => {
+        handleRotationChange(value)
+    }, [value])
+    
+    useEffect(() => {
+        setScale(scaleSlider * 1.5 )
+    }, [scaleSlider])
+
+    const handleRotationChange = (v) => {
+        setRotationSpeed(v * 36);
+    };
+
 
     return (
         <div id="header" style={landing}>
-            <Button onClick={() => setVisible(true)}></Button>
                 <div style={landingContainer}>
                 <div style={landingContainerLeft}>
 
                         <div style={lclContent}>
                             <a href="https://github.com/JoeR96"><FaGithub style={detailsIcon} /></a>
                             <a href="https://Linkedin.com/JoeR96"><FaLinkedin style={detailsIcon} /></a>
-                        </div>
-
                     </div>
-                    <img src={headshot} style={portraitImage} alt="" />
+                    
+                    <Box sx={{ width: 200 }}>
+                        <h2>Spin me around!</h2>
+                        <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
+                            <IndeterminateCheckBoxIcon />
+                            <Slider style={sliderStyle}
+                                aria-label="Volume" value={value}
+                                onChange={handleChange} />
+                            <AddBoxIcon />
+                        </Stack>
+                    </Box>
+                </div>
+                <motion.img
+                    whileHover={{
+                        scale: scale,
+                        rotate: rotationSpeed
+}}
+                  
+
+                    src={headshot} style={portraitImage} alt="" />
+               
                
                 <div style={landingContainerRight}>
-                        <div style={{...lcrContent,...landingContainerRight}}>
+                    <div style={{ ...lcrContent, ...landingContainerRight }}>
+                        
+  
                             <h6 style={lcrh6}>Junior Full Stack Developer</h6>
                             <h1 style={lcrh1}>Joe Richardson</h1>
                             <p>His palms are sweaty, knees weak, arms are heavy
@@ -165,3 +205,6 @@ const detailsIcon = {
 }
 
 
+const sliderStyle = {
+    color: '#212121',
+}
