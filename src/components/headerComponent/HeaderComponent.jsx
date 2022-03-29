@@ -37,7 +37,16 @@ export default () => {
                 <div style={landingContainer}>
                 <div style={landingContainerLeft}>
 
-                        <div style={lclContent}>
+                    <motion.div
+                        initial={{ x: "-125vh" }}
+                        transition={{
+                            delay: 0.125,
+                            default: { duration: 0.5 },
+                            type: "spring",
+                            stiffness: 100
+                        }}
+                        animate={{ x: 0 }}
+                        style={lclContent}>
                             <a href="https://github.com/JoeR96"><FaGithub style={detailsIcon} /></a>
                             <a href="https://Linkedin.com/JoeR96"><FaLinkedin style={detailsIcon} /></a>
                         <Box sx={{
@@ -53,11 +62,19 @@ export default () => {
                                 <AddBoxIcon />
                             </Stack>
                         </Box>
-                    </div>
+                    </motion.div>
                     
                     
                 </div>
                 <motion.img
+                    initial={{ y: "-125vh" }}
+                    transition={{
+                        delay: 0.125,
+                        default: { duration: 0.5 },
+                        type: "spring",
+                        stiffness: 100
+                    }}
+                    animate={{ y: 0 }}
                     whileHover={{
                         scale: scale,
                         rotate: rotationSpeed
@@ -68,7 +85,16 @@ export default () => {
                
                
                 <div style={landingContainerRight}>
-                    <div style={{ ...lcrContent, ...landingContainerRight }}>
+                    <motion.div
+                        initial={{ x: "125vh" }}
+                        transition={{
+                            delay: 0.125,
+                            default: { duration: 0.5 },
+                            type: "spring",
+                            stiffness: 100
+                        }}
+                        animate={{ x: 0 }}
+                        style={{ ...lcrContent, ...landingContainerRight }}>
                         
   
                             <h6 style={lcrh6}>Junior Full Stack Developer</h6>
@@ -88,7 +114,7 @@ export default () => {
                                     <Link to="projects" spy={true} smooth={true}><p style={projectText}>Download CV</p></Link>
                                 </Button>
                             </div>          
-                        </div>         
+                        </motion.div>         
                     </div>
                 
                 </div>
