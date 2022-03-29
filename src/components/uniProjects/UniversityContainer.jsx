@@ -82,8 +82,8 @@ export default () => {
                         }}
                     >
                         <iframe
-                            width="1200"
-                            height="720"
+                            width="900"
+                            height="480"
                             src={`https://www.youtube.com/embed/9RIftJz8cKQ`}
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

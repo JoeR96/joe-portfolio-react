@@ -31,12 +31,9 @@ export default () => {
                         </div>
                         <h2 style={projectHeaderText}>Project Power</h2>
                             <p style={projectSkillText}></p>
-                            <p style={projectSkillText}>SQL</p>
+                            <p style={projectSkillText}>Hosted on Ubuntu VPS</p>
                             <p style={projectSkillText}>.NET 6 Web API</p>
                             <p style={projectSkillText}>Entity Framework</p>
-                            <p style={projectSkillText}>Hosted on Ubuntu  VPS</p>
-                        
-
                         <div style={projectButtons}>
                             <div >
                                 <a style={detailsIcon} href="bbc.co.uk"><FaYoutube /></a>
