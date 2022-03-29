@@ -1,6 +1,7 @@
 import React, {  useRef } from 'react';
 import Image from '../project/projectImages/reactImage.jpg'
 import Image2 from '../project/projectImages/reactNativeImage.png'
+import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 import {  FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 var items = [{
@@ -52,62 +53,44 @@ export default () => {
     return (
         <div style={container}>
             <div style={header}>
-                <h1 style={headerText}>University Projects</h1>
+                <motion.h1
+                    initial={{ x: "-125vh" }}
+                    animate={{
+                        x: 0,
+                    }}
+                    transition={{
+                        delay: 0,
+                        default: { duration: 1 },
+                        type: "spring",
+                        stiffness: 100
+                    }}
+                    style={headerText}>University Projects</motion.h1>
             </div>
             <div style={body}>
 
                 <div style={slider}>
-                    <button
-                        onClick={gotoPrev}
-                        style={{ backgroundColor: '#212121', left: '5%' }}
+                    <motion.div
+                        initial={{ x: "125vh" }}
+                        animate={{
+                            x: 0,
+                        }}
+                        transition={{
+                            delay: 0,
+                            default: { duration: 1 },
+                            type: "spring",
+                            stiffness: 100
+                        }}
                     >
-                        <FaArrowLeft
-                            style={{ color: '#EFEFEF' }}
+                        <iframe
+                            width="1200"
+                            height="720"
+                            src={`https://www.youtube.com/embed/9RIftJz8cKQ`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            title="Embedded youtube"
                         />
-                    </button>
-                    <Slider {...settings} ref={sliderRef}>
-                        { items.map((test) => (
-                            <div
-                                className='single--testimony'
-                                key={test.id}
-                            >
-                                <div className='testimonials--container'>
-                                    <div
-                                        className='review--img'
-                                        style={{
-                                            backgroundColor:
-                                                '#212121',
-                                        }}
-                                    >
-                                        <img
-                                            src={test.image}
-                                            alt={test.name}
-                                        />
-                                    </div>
-                                    <div
-                                        className='review--content'
-                                        style={{
-                                            backgroundColor:
-                                                '#212121',
-                                            color: '#EFEFEF'
-                                        }}
-                                    >
-                                        <p>{test.text}</p>
-                                        <h1>{test.name}</h1>
-                                        <h4>{test.title}</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </Slider>
-                    <button
-                        onClick={gotoNext}
-                        style={{ backgroundColor: '#212121', left: '5%' }}
-                    >
-                        <FaArrowRight
-                            style={{ color: '#EFEFEF' }}
-                        />
-                    </button>
+                    </motion.div>
                 </div>
             </div>
         </div>
