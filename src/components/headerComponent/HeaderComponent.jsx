@@ -7,6 +7,7 @@ import {
     FaGithub,
 
 } from 'react-icons/fa';
+import cv from './JR-CV.docx'
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox'; import { motion } from 'framer-motion';
 export default () => {
@@ -35,8 +36,8 @@ export default () => {
                         }}
                         animate={{ x: 0 }}
                         style={lclContent}>
-                            <a href="https://github.com/"><FaGithub style={detailsIcon} /></a>
-                            <a href="https://Linkedin.com/"><FaLinkedin style={detailsIcon} /></a>
+                        <a href="https://github.com/JoeR96/"><FaGithub style={detailsIcon} /></a>
+                        <a href="https://www.linkedin.com/in/joe-richardson/"><FaLinkedin style={detailsIcon} /></a>
                         <Box sx={{
                             width: 250,
                             padding: '2rem'
@@ -97,7 +98,7 @@ export default () => {
                                     <Link to="contact" spy={true} smooth={true}><p>Contact Me</p></Link>
                                 </Button>
                                 <Button variant="contained" style={lcrProjectButton}>
-                                    <Link to="projects" spy={true} smooth={true}><p style={projectText}>Download CV</p></Link>
+                                <Link to={cv} spy={true} smooth={true}><p style={projectText}>Download CV</p></Link>
                                 </Button>
                             </div>          
                         </motion.div>         

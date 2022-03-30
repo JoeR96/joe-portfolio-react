@@ -12,7 +12,7 @@ export default () => {
             <div style={projectHeader}>
             </div>
             <motion.div
-                initial={{ x: "-125vh" }}
+                initial={{ x: "-50vh" }}
                 whileInView={{
                     x: 0,
                 }}
@@ -98,7 +98,11 @@ export default () => {
                         
                         <div style={projectButtons}>
                             <div >
-                                <a style={detailsIcon} href="https://github.com/JoeR96/RN/"><FaGithub aria-label='GitHub'/></a>
+                                <a style={detailsIcon} href="https://github.com/JoeR96/RN/"><FaGithub aria-label='GitHub' /></a>
+
+                            </div>
+                            <div>
+                                <a style={detailsIcon} href="https://youtube.com/shorts/910hFwyu_Qk?feature=share"><FaYoutube aria-label='Youtube' /></a>
                             </div>
                         </div>
                     </motion.div>
