@@ -26,8 +26,11 @@ export default () => {
                         stiffness: 100
                     }}
                     style={aboutDescription}>
-                        <h2 style={h2text}>What Mischief do I Cause?</h2>
-                        <p style={descriptionText}>His palms are sweaty, knees weak, arms are heavy There's vomit on his sweater already, mom's spaghetti He's nervous, but on the surface he looks calm and ready To drop bombs, but he keeps on forgetting What he wrote down, the whole crowd goes so loud He opens his mouth, but the words won't come out He's choking, how? Everybody's joking now</p>
+                        <h2 style={h2text}>What I Do</h2>
+                    <p style={descriptionText}>
+                        During the day I am using C# to develop a manufacturing solution for Sage200,
+                        by the night I have started developing my own solution for a fitness program that is stored on a spreadsheet. Project power consists of a workout creation dashboard, a react native mobile app and a .NET Backend. 
+                        </p>
                     </motion.div>       
                     </div>
             </div>

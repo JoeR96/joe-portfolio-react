@@ -87,15 +87,11 @@ export default () => {
                         style={{ ...lcrContent, ...landingContainerRight }}>
                         
   
-                            <h6 style={lcrh6}>Carnage Creator</h6>
+                            <h6 style={lcrh6}>Junior Full Stack Developer</h6>
                             <h1 style={lcrh1}>Joe Richardson</h1>
-                            <p>His palms are sweaty, knees weak, arms are heavy
-                                There's vomit on his sweater already, mom's spaghetti
-                                He's nervous, but on the surface he looks calm and ready
-                                To drop bombs, but he keeps on forgetting
-                                What he wrote down, the whole crowd goes so loud
-                                He opens his mouth, but the words won't come out
-                                He's choking, how? Everybody's joking now</p>
+                        <p>Hi I'm Joe, by day I am coding with C# for a manufacturing product, 
+                            by night I am creating websites with React and Javascript!
+                            </p>
                             <div style={lcrButtonContainer}>
                                 <Button variant="outlined" style={lcrContactButton} >
                                     <Link to="contact" spy={true} smooth={true}><p>Contact Me</p></Link>

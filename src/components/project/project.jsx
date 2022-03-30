@@ -47,10 +47,7 @@ export default () => {
                             <p style={projectSkillText}>Entity Framework</p>
                         <div style={projectButtons}>
                             <div >
-                                <a style={detailsIcon} href="bbc.co.uk"><FaYoutube /></a>
-                            </div>
-                            <div >
-                                <a style={detailsIcon} href="bbc.co.uk"><FaGithub /></a>
+                                <a style={detailsIcon} href="https://github.com/JoeR96/ProjectPower"><FaGithub /></a>
                             </div>
                         </div>
                     </motion.div>
@@ -75,10 +72,7 @@ export default () => {
                        
                         <div style={projectButtons}>
                             <div >
-                                <a style={detailsIcon} href="bbc.co.uk"><FaYoutube /></a>
-                            </div>
-                            <div >
-                                <a style={detailsIcon} href="bbc.co.uk"><FaGithub /></a>
+                                <a style={detailsIcon} href="https://github.com/JoeR96/ProjectPowerReact"><FaGithub /></a>
                             </div>
                         </div>
                     </motion.div>
@@ -104,10 +98,7 @@ export default () => {
                         
                         <div style={projectButtons}>
                             <div >
-                                <a style={detailsIcon} href="bbc.co.uk"><FaYoutube /></a>
-                            </div>
-                            <div >
-                                <a style={detailsIcon} href="bbc.co.uk"><FaGithub aria-label='GitHub'/></a>
+                                <a style={detailsIcon} href="https://github.com/JoeR96/RN/"><FaGithub aria-label='GitHub'/></a>
                             </div>
                         </div>
                     </motion.div>
