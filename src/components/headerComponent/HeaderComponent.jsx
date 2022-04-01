@@ -97,9 +97,6 @@ export default () => {
                                 <Button variant="outlined" style={lcrContactButton} >
                                     <Link to="contact" spy={true} smooth={true}><p>Contact Me</p></Link>
                                 </Button>
-                                <Button variant="contained" style={lcrProjectButton}>
-                                <Link to={cv} spy={true} smooth={true}><p style={projectText}>Download CV</p></Link>
-                                </Button>
                             </div>          
                         </motion.div>         
                     </div>

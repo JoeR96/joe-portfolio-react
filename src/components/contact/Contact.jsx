@@ -86,19 +86,19 @@ export default function Contact() {
                         <a style={personalDetails}>
                             <FiPhone style={detailsIcon} />
                             <p style={contactText}>
-                                bobdylan@gmail.com
+                                joeyrichardson96@gmail.com
                             </p>
                         </a>
                         <a style={personalDetails}>
                             <FiAtSign style={detailsIcon} />
                             <p style={contactText}>
-                                123-456-789
+                                07557987521
                             </p>
                         </a>
                         <a style={personalDetails}>
                             <HiOutlineLocationMarker style={detailsIcon} />
                             <p style={contactText}>
-                                Dave, Davidson
+                                Suffolk, England
                             </p>
                         </a>
                     </motion.div>
@@ -120,11 +120,29 @@ export default function Contact() {
                     style={sendButton} variant="contained" >
                     <Link to="header" spy={true} smooth={true}><p style={sendText}>Send</p></Link>
                 </motion.Button>
-                <Button variant="contained" >
-                    <Link to="header" spy={true} smooth={true}><p>Return</p></Link>
-                </Button>
+               
+                
             </div>
-            
+            <div style={returnContainer}>
+                <motion.Button
+                    initial={{
+                        x: 225,
+                        opacity: 0
+                    }}
+                    whileInView={{
+                        x: 0,
+                        opacity: 1
+                    }}
+                    transition={{
+                        delay: 0,
+                        default: { duration: 0.8 },
+                        type: "spring",
+                        stiffness: 100
+                    }}
+                    style={returnButton} variant="outlined" >
+                    <Link to="header" spy={true} smooth={true}><p>Return</p></Link>
+                </motion.Button>
+            </div>
        </div>
     );
 }
@@ -219,6 +237,13 @@ const sendButton = {
     borderRadius: 35
 }
 
+const returnButton = {
+    backgroundColor: '#f56539',
+    width: '150px',
+    height: '50px',
+    borderRadius: 35
+}
+
 const sendText = {
     color: '#212121',
     fontSize: '16px',
@@ -263,4 +288,12 @@ const personalDetails = {
     justifyContent: 'flex-start',
     width: '100%',
     marginBottom : '2.5rem'
+}
+
+const returnContainer = {
+    alignItems: 'left',
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'flex-end',
+    margin: '3rem'
 }
