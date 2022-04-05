@@ -20,7 +20,12 @@ export default () => {
         setScale(newValue / 50)
         setRotationrotationSpeed(newValue)
     };
-
+    const onDownload = () => {
+            const link = document.createElement("a");
+            link.download = `./JR-CV.docx`;
+            link.href = "./JR-CV.docx";
+            link.click();
+        };
     return (
         <div id="header" style={landing}>
                 <div style={landingContainer}>
@@ -37,7 +42,6 @@ export default () => {
                         animate={{ x: 0 }}
                         style={lclContent}>
                         <a href="https://github.com/JoeR96/"><FaGithub style={detailsIcon} /></a>
-                        <a href="https://www.linkedin.com/in/joe-richardson/"><FaLinkedin style={detailsIcon} /></a>
                         <Box sx={{
                             width: 250,
                             padding: '2rem'
