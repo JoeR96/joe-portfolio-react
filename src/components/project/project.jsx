@@ -13,7 +13,7 @@ export default () => {
             </div>
             <motion.div
                 initial={{ x: "-50vh" }}
-                whileInView={{
+                animate={{
                     x: 0,
                 }}
                 transition={{
@@ -24,10 +24,40 @@ export default () => {
                 }}
 
                 style={projectBody} >
+                     <div style={project}>
+                    <motion.div
+                        initial={{ y: -125 }}
+                        animate={{
+                            y: 0,
+                        }}
+                        transition={{
+                            delay: 0,
+                            default: { duration: 0.8 },
+                            type: "spring",
+                            stiffness: 100
+                        }}
+                        style={projectContent}>
+                        <div style={projectDescription}>
+
+                        </div>
+                        <h2 style={projectHeaderText}>Recipe App</h2>
+                        <p style={projectSkillText}></p>
+                            <p style={projectSkillText}>.Net 6</p>       
+                            <p style={projectSkillText}>Entity Framework</p>       
+                            <p style={projectSkillText}>N Unit</p>       
+                        <div style={projectButtons}>
+                            <div >
+                                <a style={detailsIcon} href="https://github.com/JoeR96/RecipeMateGeneric"><FaGithub aria-label='GitHub' /></a>
+
+                            </div>
+
+                        </div>
+                    </motion.div>
+                </div>
                 <div style={project}>
                     <motion.div
                         initial={{ y: -125 }}
-                        whileInView={{
+                        animate={{
                             y: 0,
                         }}
                         transition={{
@@ -55,7 +85,7 @@ export default () => {
                 <div style={project}>
                     <motion.div
                         initial={{ y: -125 }}
-                        whileInView={{
+                        animate={{
                             y: 0,
                         }}
                         transition={{
@@ -80,7 +110,7 @@ export default () => {
                 <div style={project}>
                     <motion.div
                         initial={{ y: -125 }}
-                        whileInView={{
+                        animate={{
                             y: 0,
                         }}
                         transition={{
@@ -107,6 +137,7 @@ export default () => {
                         </div>
                     </motion.div>
                 </div>
+               
             </motion.div>
         </div>
         

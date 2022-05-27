@@ -15,7 +15,6 @@ export default () => {
     const [scale, setScale] = React.useState(0.000121);
     const [rotationSpeed, setRotationrotationSpeed] = React.useState(36);
     const handleChange = (event, newValue) => {
-        console.log(newValue)
         setValue(newValue);
         setScale(newValue / 50)
         setRotationrotationSpeed(newValue)
