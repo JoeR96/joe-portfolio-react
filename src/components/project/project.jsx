@@ -123,16 +123,14 @@ export default () => {
                         <div style={projectDescription}>
 
                         </div>
-                        <h2 style={projectHeaderText}>Project Power Mobile App</h2>
-                            <p style={projectSkillText}>React Native</p>       
-                        
+                        <h2 style={projectHeaderText}>Login System</h2>
+                            <p style={projectSkillText}></p>
+                            <p style={projectSkillText}>Intergration and Unit tested</p>
+                            <p style={projectSkillText}>.NET 6 Web API</p>
+                            <p style={projectSkillText}>Entity Framework</p>
                         <div style={projectButtons}>
                             <div >
-                                <a style={detailsIcon} href="https://github.com/JoeR96/RN/"><FaGithub aria-label='GitHub' /></a>
-
-                            </div>
-                            <div>
-                                <a style={detailsIcon} href="https://youtube.com/shorts/910hFwyu_Qk?feature=share"><FaYoutube aria-label='Youtube' /></a>
+                                <a style={detailsIcon} href="https://github.com/JoeR96/LoginSystem"><FaGithub /></a>
                             </div>
                         </div>
                     </motion.div>
