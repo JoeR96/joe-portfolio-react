@@ -89,18 +89,21 @@ export default () => {
                         }}
                         animate={{ x: 0 }}
                         style={{ ...lcrContent, ...landingContainerRight }}>
-                        
-  
-                            <h6 style={lcrh6}>Junior Full Stack Developer</h6>
-                            <h1 style={lcrh1}>Joe Richardson</h1>
-                        <p>Hi I'm Joe, by day I am coding with C# for a manufacturing product, 
-                            by night I am creating websites with React and Javascript!
-                            </p>
-                            <div style={lcrButtonContainer}>
-                                <Button variant="outlined" style={lcrContactButton} >
+                        <div
+                            style={{textAlign:'center'}}>
+                        <h1 style={lcrh1}>Joe Richardson</h1>
+
+                        <h2 style={lcrh6}>Software Engineer</h2>
+                        <p>Fullstack .NET Engineer experienced in C# and Javascript. Interested in architectural and design patterns, object oriented approaches and developing testable solutions. </p>
+                        <Button variant="outlined" style={lcrContactButton} >
                                     <Link to="contact" spy={true} smooth={true}><p>Contact Me</p></Link>
                                 </Button>
-                            </div>          
+                                <Button variant="outlined" style={lcrContactButton} >
+                                    <Link to="projects" spy={true} smooth={true}><p>Projects</p></Link>
+                                </Button>
+                        </div>
+                    
+                          
                         </motion.div>         
                     </div>
                 
@@ -174,7 +177,7 @@ const lcrh1 = {
 }
 
 const lcrh6 = {
-    fontSize: '1.25rem',
+    fontSize: '2.25rem',
     fontWeight: '500',
     marginBotton: '-0.85rem',
     opacity: '0.8'

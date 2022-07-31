@@ -12,9 +12,8 @@ function App() {
       <div className="App">
       {/* <Navbar></Navbar> */}
       <HeaderComponent />
-      <About s/>
+      {/* <About /> */}
       <Project ></Project>
-      <UniversityContainer></UniversityContainer>
         <div id="contact" style={contactStyle}>
           <Contact></Contact>
         </div>

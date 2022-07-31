@@ -3,37 +3,7 @@ import { motion } from 'framer-motion'
 
 export default () => {
     return (
-        <div style={about} id="about">
-                <div style={lineStyling}>
-                    <div style={circle}></div>
-                    <div style={circle}></div>
-                    <div style={styleLine}></div>
-                </div> 
-                <div style={aboutBody}>
-                    
-                <motion.div
-                    initial={{
-                        y: "-25vh",
-                opacity:0    }}
-                    whileInView={{
-                        y: 0,
-                        opacity:1
-                    }}
-                    transition={{
-                        delay: 0.125,
-                        default: { duration: 0.8 },
-                        type: "spring",
-                        stiffness: 100
-                    }}
-                    style={aboutDescription}>
-                        <h2 style={h2text}>What I Do</h2>
-                    <p style={descriptionText}>
-                        During the day I am using C# to develop a manufacturing solution for Sage200,
-                        by the night I have started developing my own solution for a fitness program that is stored on a spreadsheet. Project power consists of a workout creation dashboard, a react native mobile app and a .NET Backend. 
-                        </p>
-                    </motion.div>       
-                    </div>
-            </div>
+       <div></div>
     )
    
 }
@@ -41,9 +11,7 @@ export default () => {
 const about = {
     position: 'relative',
     backgroundColor: '#212121',
-    paddingBottom: '8rem',
-    minHeight: '50vh',
-
+    paddingBottom: '8rem'
 }
 
 const lineStyling = {
@@ -93,9 +61,10 @@ const aboutImage = {
 }
 
 const h2text = {
-    color: '#F56539',
-    fontSize: '3.3rem',
-    marginBottom: '40px'
+    color: 'WHITE',
+    fontSize: '6.6rem',
+    marginBottom: '40px',
+    textAlign:'center'
 }
 
 const descriptionText = {

@@ -101,12 +101,13 @@ export default () => {
 
 const container = {
     backgroundColor: '#F56539',
-    height: '100vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    padding: ' 0px 64px 64px 64px',
+    height:'100vh'
 }
 
 const header = {

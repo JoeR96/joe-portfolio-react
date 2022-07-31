@@ -1,142 +1,50 @@
 import React from 'react'
-import {
-    FaGithub,
-    FaYoutube
-} from 'react-icons/fa';
-import { motion } from "framer-motion"
+import { Grid } from '@mui/material';
+import ProjectCard from './ProjectCard';
+import projects from './projects.js'
 
 export default () => {
     return (
+        
         <div
+        id='projects'
             style={projectContainer}>
-            <div style={projectHeader}>
+        <div style={about} id="about">
+                <div style={lineStyling}>
+                    <div style={circle}></div>
+                    <div style={circle}></div>
+                    <div style={styleLine}></div>
+                </div> 
+                <div style={aboutBody}>
+                    
+                <div            
+                    style={aboutDescription}>
+                    <h3 style = {h2text}>Projects</h3>
+                    </div>       
+                </div>
             </div>
-            <motion.div
-                initial={{ x: "-50vh" }}
-                animate={{
-                    x: 0,
-                }}
-                transition={{
-                    delay: 0,
-                    default: { duration: 1.25 },
-                    type: "spring",
-                    stiffness: 100
-                }}
-
-                style={projectBody} >
-                     <div style={project}>
-                    <motion.div
-                        initial={{ y: -125 }}
-                        animate={{
-                            y: 0,
-                        }}
-                        transition={{
-                            delay: 0,
-                            default: { duration: 0.8 },
-                            type: "spring",
-                            stiffness: 100
-                        }}
-                        style={projectContent}>
-                        <div style={projectDescription}>
-
-                        </div>
-                        <h2 style={projectHeaderText}>Recipe App</h2>
-                        <p style={projectSkillText}></p>
-                            <p style={projectSkillText}>.Net 6</p>       
-                            <p style={projectSkillText}>Entity Framework</p>       
-                            <p style={projectSkillText}>N Unit</p>       
-                        <div style={projectButtons}>
-                            <div >
-                                <a style={detailsIcon} href="https://github.com/JoeR96/RecipeMateGeneric"><FaGithub aria-label='GitHub' /></a>
-
-                            </div>
-
-                        </div>
-                    </motion.div>
-                </div>
-                <div style={project}>
-                    <motion.div
-                        initial={{ y: -125 }}
-                        animate={{
-                            y: 0,
-                        }}
-                        transition={{
-                            delay: 0,
-                            default: { duration: 0.8 },
-                            type: "spring",
-                            stiffness: 100
-                        }}
-                        style={projectContent}>
-                        <div style={projectDescription}>
-                         
-                        </div>
-                        <h2 style={projectHeaderText}>Project Power</h2>
-                            <p style={projectSkillText}></p>
-                            <p style={projectSkillText}>Hosted on Ubuntu VPS</p>
-                            <p style={projectSkillText}>.NET 6 Web API</p>
-                            <p style={projectSkillText}>Entity Framework</p>
-                        <div style={projectButtons}>
-                            <div >
-                                <a style={detailsIcon} href="https://github.com/JoeR96/ProjectPower"><FaGithub /></a>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-                <div style={project}>
-                    <motion.div
-                        initial={{ y: -125 }}
-                        animate={{
-                            y: 0,
-                        }}
-                        transition={{
-                            delay: 0,
-                            default: { duration: 0.8 },
-                            type: "spring",
-                            stiffness: 100
-                        }}
-                        style={projectContent}>
-                        <h2 style={projectHeaderText}>Project Power Web Dashboard</h2>
-                            <p style={projectSkillText}>React</p>
-                            <p style={projectSkillText}>Material UI</p>
-                            <p style={projectSkillText}>React DnD</p>
-                       
-                        <div style={projectButtons}>
-                            <div >
-                                <a style={detailsIcon} href="https://github.com/JoeR96/ProjectPowerReact"><FaGithub /></a>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-                <div style={project}>
-                    <motion.div
-                        initial={{ y: -125 }}
-                        animate={{
-                            y: 0,
-                        }}
-                        transition={{
-                            delay: 0,
-                            default: { duration: 0.8 },
-                            type: "spring",
-                            stiffness: 100
-                        }}
-                        style={projectContent}>
-                        <div style={projectDescription}>
-
-                        </div>
-                        <h2 style={projectHeaderText}>Login System</h2>
-                            <p style={projectSkillText}></p>
-                            <p style={projectSkillText}>Intergration and Unit tested</p>
-                            <p style={projectSkillText}>.NET 6 Web API</p>
-                            <p style={projectSkillText}>Entity Framework</p>
-                        <div style={projectButtons}>
-                            <div >
-                                <a style={detailsIcon} href="https://github.com/JoeR96/LoginSystem"><FaGithub /></a>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-               
-            </motion.div>
+            
+            <Grid 
+                container
+                spacing={2}
+              
+            >
+                {projects.map((project,index)  => {
+                return(                
+                        <Grid 
+                        item
+                        xs={3} 
+                        md={3} 
+                        xl={3} 
+                        lg={3}
+                        key={index}
+                        >
+                            <ProjectCard props={project}></ProjectCard>
+                            
+                        </Grid> 
+                )
+                })}
+                </Grid>
         </div>
         
     )
@@ -146,7 +54,6 @@ export default () => {
 
 const projectContainer = {
     backgroundColor: "#212121",
-    minHeight: '50vh',
 
 }
 
@@ -255,3 +162,65 @@ const detailsIcon = {
     }
 }
 
+const about = {
+    position: 'relative',
+    backgroundColor: '#212121',
+    paddingBottom: '8rem'
+}
+
+const lineStyling = {
+    position: 'absolute',
+    top: '50px',
+    left: '5%',
+    height: '200px',
+    width: '85%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-Between'
+}
+
+const circle = {
+    width: '10px',
+    height: '10px',
+    borderRadius: '50%',
+    backgroundColor: '#F56539'
+}
+
+const styleLine = {
+    width: '95%',
+    height: '5px',
+    borderRaidus: '10px',
+    backgroundColor: '#F56539'
+}
+
+const aboutBody = {
+    paddingTop: '16rem',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    height: 'fit-content'
+}
+
+const aboutDescription = {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'space-evenly',
+    flex: '0.5',
+    width: '100%'
+}
+
+const aboutImage = {
+    marginTop : '40px'
+}
+
+const h2text = {
+    color: 'WHITE',
+    fontSize: '6.6rem',
+    marginBottom: '40px',
+    textAlign:'center'
+}
+
+const descriptionText = {
+    color: '#EAEAEA'
+}

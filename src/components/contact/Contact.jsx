@@ -89,16 +89,11 @@ export default function Contact() {
                                 joeyrichardson96@gmail.com
                             </p>
                         </a>
-                        <a style={personalDetails}>
-                            <FiAtSign style={detailsIcon} />
-                            <p style={contactText}>
-                                07557987521
-                            </p>
-                        </a>
+            
                         <a style={personalDetails}>
                             <HiOutlineLocationMarker style={detailsIcon} />
                             <p style={contactText}>
-                                Suffolk, England
+                                Cambridge, England
                             </p>
                         </a>
                     </motion.div>
@@ -142,12 +137,29 @@ export default function Contact() {
                     style={returnButton} variant="outlined" >
                     <Link to="header" spy={true} smooth={true}><p>Return</p></Link>
                 </motion.Button>
+                <motion.Button
+                    initial={{
+                        x: 225,
+                        opacity: 0
+                    }}
+                    whileInView={{
+                        x: 0,
+                        opacity: 1
+                    }}
+                    transition={{
+                        delay: 0,
+                        default: { duration: 0.8 },
+                        type: "spring",
+                        stiffness: 100
+                    }}
+                    style={returnButton} variant="outlined" >
+                    <Link to="header" spy={true} smooth={true}><p>Return</p></Link>
+                </motion.Button>
             </div>
        </div>
     );
 }
 const contacts = {
-    minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
