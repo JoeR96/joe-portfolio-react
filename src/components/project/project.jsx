@@ -33,10 +33,10 @@ export default () => {
                 return(                
                         <Grid 
                         item
-                        xs={3} 
-                        md={3} 
-                        xl={3} 
-                        lg={3}
+                        xs={4} 
+                        md={4} 
+                        xl={4} 
+                        lg={4}
                         key={index}
                         >
                             <ProjectCard props={project}></ProjectCard>

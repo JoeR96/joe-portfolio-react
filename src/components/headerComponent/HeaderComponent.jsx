@@ -95,6 +95,7 @@ export default () => {
 
                         <h2 style={lcrh6}>Software Engineer</h2>
                         <p>Fullstack .NET Engineer experienced in C# and Javascript. Interested in architectural and design patterns, object oriented approaches and developing testable solutions. </p>
+                        <br></br>
                         <Button variant="outlined" style={lcrContactButton} >
                                     <Link to="contact" spy={true} smooth={true}><p>Contact Me</p></Link>
                                 </Button>
